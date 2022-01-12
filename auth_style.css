@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Montserrat:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --brand-color: #f6f6f6;
+  --brand-red: #e81f3d;
+  --brand-red-hover: #ca1530;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--brand-color);
+}
+.login-page {
+  width: 360px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+form p {
+  color: var(--brand-red);
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: var(--brand-color);
+  max-width: 360px;
+  margin: 40px 0;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+@media (max-width: 360px) {
+  .form {
+    max-width: 320px;
+  }
+}
+.form h3 {
+  color: #1e1e1e;
+}
+.form input {
+  font-family: "Inter", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 15px 0;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: var(--brand-red);
+  width: 100%;
+  border: 0;
+  margin: 4px 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: var(--brand-red-hover);
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: var(--brand-red);
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.form .login-form {
+  display: none;
+}
+.form .register-form.active {
+  display: block;
+}
+.form .login-form.active {
+  display: block;
+}

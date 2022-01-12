@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Montserrat:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --brand-color: #f6f6f6;
+  --brand-red: #e81f3d;
+  --brand-red-hover: #ca1530;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--brand-color);
+}
+#pdf-viewer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.navbar-collapse {
+  flex-grow: none !important;
+}
+.btn a {
+  text-decoration: none;
+  color: var(--brand-color);
+}
