@@ -34,6 +34,11 @@ body {
 a #register-btn {
   padding: 0.8rem 0 0.8rem 1rem !important;
 }
+.read-btn a {
+  text-decoration: none;
+  text-decoration: none;
+  color: var(--brand-color);
+}
 .btn a {
   text-decoration: none;
   color: var(--brand-color);
