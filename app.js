@@ -47,15 +47,15 @@ document.getElementById("subscribe-btn").addEventListener("click", (event) => {
 // }
 
 // All Newspapers
-document.getElementById("allNewspapers-btn").addEventListener("click", (event) => {
-    // if (localStorage.getItem("isLoggedIn") === "true") {
-    //     window.location.href = "allnewspapers.html";
-    // } else {
-    //     alert("Login to read all newspapers!");
-    //     window.location.href = "login.html";
-    // }
-    window.location.href = "allnewspapers.html";
-});
+// document.getElementById("allNewspapers-btn").addEventListener("click", (event) => {
+//     // if (localStorage.getItem("isLoggedIn") === "true") {
+//     //     window.location.href = "allnewspapers.html";
+//     // } else {
+//     //     alert("Login to read all newspapers!");
+//     //     window.location.href = "login.html";
+//     // }
+//     window.location.href = "allnewspapers.html";
+// });
 
 
 
