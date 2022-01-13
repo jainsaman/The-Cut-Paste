@@ -1,37 +1,60 @@
-pdfjsLib.GlobalWorkerOptions.workerSrc =
-    "https://mozilla.github.io/pdf.js/build/pdf.worker.js";
+// pdfjsLib.GlobalWorkerOptions.workerSrc =
+//     "https://mozilla.github.io/pdf.js/build/pdf.worker.js";
 
-const url = "./newspaper.pdf";
-let pdfDoc = null,
-    pageNum = 1,
-    pageIsRendering = false,
-    pageNumIsPending = null;
+// const url = "./newspaper.pdf";
+// let pdfDoc = null,
+//     pageNum = 1,
+//     pageIsRendering = false,
+//     pageNumIsPending = null;
 
-const scale = 1.5;
+// const scale = 1.5;
 
-// Get Document
-pdfjsLib.getDocument(url).promise.then((pdfDoc_) => {
-    pdfDoc = pdfDoc_;
-    viewer = document.getElementById("pdf-viewer");
-    for (page = 1; page <= pdfDoc.numPages; page++) {
-        canvas = document.createElement("canvas");
-        canvas.className = "pdf-page-canvas";
-        viewer.appendChild(canvas);
-        renderPage(page, canvas);
-    }
+// // Get Document
+// pdfjsLib.getDocument(url).promise.then((pdfDoc_) => {
+//     pdfDoc = pdfDoc_;
+//     viewer = document.getElementById("pdf-viewer");
+//     for (page = 1; page <= pdfDoc.numPages; page++) {
+//         canvas = document.createElement("canvas");
+//         canvas.className = "pdf-page-canvas";
+//         viewer.appendChild(canvas);
+//         renderPage(page, canvas);
+//     }
+// });
+
+// function renderPage(pageNumber, canvas) {
+//     pdfDoc.getPage(pageNumber).then(function (page) {
+//         viewport = page.getViewport({ scale: scale });
+//         canvas.height = viewport.height;
+//         canvas.width = viewport.width;
+//         page.render({
+//             canvasContext: canvas.getContext("2d"),
+//             viewport: viewport,
+//         });
+//     });
+// }
+
+// Adobe
+
+
+const previewConfig = {
+    showDownloadPDF: false,
+    showPageControls: false,
+    showAnnotationTools: false,
+    showPageControls: false,
+    showLeftHandPanel: false,
+}
+
+document.addEventListener("adobe_dc_view_sdk.ready", function () {
+    var adobeDCView = new AdobeDC.View({ clientId: "a94c9ac546334b69bf5b8a3229c9637c", divId: "adobe-dc-view" });
+    // Consume previewConfig here. . .
+    adobeDCView.previewFile({
+        content: { location: { url: "./newspaper.pdf" } },
+        metaData: { fileName: "newspaper.pdf" }
+    }, previewConfig);
 });
 
-function renderPage(pageNumber, canvas) {
-    pdfDoc.getPage(pageNumber).then(function (page) {
-        viewport = page.getViewport({ scale: scale });
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-        page.render({
-            canvasContext: canvas.getContext("2d"),
-            viewport: viewport,
-        });
-    });
-}
+
+// a94c9ac546334b69bf5b8a3229c9637c
 
 // Newsletter Subscription
 document.getElementById("subscribe-btn").addEventListener("click", (event) => {
