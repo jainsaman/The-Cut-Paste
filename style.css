@@ -31,8 +31,8 @@ body {
   max-height: 100%;
   margin: 0 auto;
 }
-#register-btn {
-  padding: 1rem 0 !important;
+a #register-btn {
+  padding: 0.8rem 0 0.8rem 1rem !important;
 }
 .btn a {
   text-decoration: none;

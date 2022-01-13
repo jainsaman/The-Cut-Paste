@@ -31,7 +31,7 @@ document.getElementById("subscribe-btn").addEventListener("click", (event) => {
 
 // LogOut
 document.getElementById("logout-btn").addEventListener("click", (event) => {
-    localStorage.clear();
+    localStorage.removeItem("isLoggedIn");
     alert("You have been logged out!");
     window.location.href = "index.html";
 });
