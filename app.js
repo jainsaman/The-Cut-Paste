@@ -56,3 +56,14 @@ if (localStorage.getItem("isLoggedIn") === "true") {
     document.getElementById("register-btn").style.display = "block";
     document.getElementById("logout-btn").style.display = "none";
 }
+
+// All Newspapers
+document.getElementById("allNewspapers-btn").addEventListener("click", (event) => {
+    if (localStorage.getItem("isLoggedIn") === "true") {
+
+        window.location.href = "allnewspapers.html";
+    } else {
+        alert("Please login to view this page!")
+        window.location.href = "login.html";
+    }
+});

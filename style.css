@@ -26,3 +26,6 @@ body {
   text-decoration: none;
   color: var(--brand-color);
 }
+#allNewspapers-btn{
+  cursor: pointer;
+}
