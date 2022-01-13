@@ -34,6 +34,9 @@ body {
 .card-title {
   margin: 0 !important;
 }
+#read-btn:hover {
+  color: var(--brand-color);
+}
 #read-btn a {
   text-decoration: none;
   color: #1e1e1e;
