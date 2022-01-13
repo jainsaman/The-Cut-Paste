@@ -56,21 +56,22 @@ document.getElementById("allNewspapers-btn").addEventListener("click", (event) =
     }
 });
 
-// Example Newspaper data
+// Sample Newspapers Data
 let newspapers = [
     {
         url: "./newspaper.pdf",
-        date: "July 2020",
+        date: "2020",
     },
     {
         url: "./newspaper.pdf",
-        date: "July 2021",
+        date: "2021",
     },
     {
         url: "./newspaper.pdf",
-        date: "July 2022",
-    }
+        date: "2022",
+    },
 ]
+console.log(newspapers)
 newspapers.map(newspaper => {
     console.log(
         newspaper.date,
