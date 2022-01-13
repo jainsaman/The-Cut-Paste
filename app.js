@@ -42,8 +42,8 @@ document.getElementById("subscribe-btn").addEventListener("click", (event) => {
 
 // LogOut
 document.getElementById("logout-btn").addEventListener("click", (event) => {
-    console.log("Clicked");
     localStorage.clear();
+    window.location.href = "index.html";
 });
 
 if (localStorage.getItem("isLoggedIn") === "true") {
