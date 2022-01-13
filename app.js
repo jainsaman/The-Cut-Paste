@@ -42,6 +42,8 @@ const previewConfig = {
     showAnnotationTools: false,
     showPageControls: false,
     showLeftHandPanel: false,
+    showPrintPDF: false,
+    enableFormFilling: false,
 }
 
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
