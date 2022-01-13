@@ -64,25 +64,22 @@ document.getElementById("subscribe-btn").addEventListener("click", (event) => {
 // Reference Newspapers Data
 let newspapers = [
     {
-        url: "Read Now",
+        url: "./newspaper.pdf",
         date: "July 2020",
     },
     {
-        url: "Read Now",
-        date: "July 2020",
+        url: "./newspaper.pdf",
+        date: "July 2021",
     },
     {
-        url: "Read Now",
-        date: "July 2020",
+        url: "./newspaper.pdf",
+        date: "July 2022",
     },
     {
-        url: "Read Now",
-        date: "July 2020",
+        url: "./newspaper.pdf",
+        date: "July 2023",
     },
-    {
-        url: "Read Now",
-        date: "July 2020",
-    },
+
 
 
 ]
@@ -92,8 +89,8 @@ document.getElementById('card-container').innerHTML = newspapers.map(newspaper =
     `<div class="card m-3 w-75 mt-3">
         <div class="card-body w-100 d-flex justify-content-between">
             <h5 class="card-title">${newspaper.date}</h5>
-            <button type="button" class="btn-outline-danger">
-            <a href="./newspaper.pdf" target="_blank">Read Now</a>
+            <button id="read-btn" type="button" class="btn btn-outline-danger">
+            <a href=${newspaper.url} target="_blank">Read Now</a>
           </button>
         </div>
     </div>
