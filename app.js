@@ -30,30 +30,31 @@ document.getElementById("subscribe-btn").addEventListener("click", (event) => {
 });
 
 // LogOut
-document.getElementById("logout-btn").addEventListener("click", (event) => {
-    localStorage.removeItem("isLoggedIn");
-    alert("You have been logged out!");
-    window.location.href = "index.html";
-});
+// document.getElementById("logout-btn").addEventListener("click", (event) => {
+//     localStorage.removeItem("isLoggedIn");
+//     alert("You have been logged out!");
+//     window.location.href = "index.html";
+// });
 
-if (localStorage.getItem("isLoggedIn") === "true") {
-    document.getElementById("register-btn").style.display = "none";
-    document.getElementById("login-btn").style.display = "none";
-    document.getElementById("logout-btn").style.display = "block";
-} else {
-    document.getElementById("login-btn").style.display = "block";
-    document.getElementById("register-btn").style.display = "block";
-    document.getElementById("logout-btn").style.display = "none";
-}
+// if (localStorage.getItem("isLoggedIn") === "true") {
+//     document.getElementById("register-btn").style.display = "none";
+//     document.getElementById("login-btn").style.display = "none";
+//     document.getElementById("logout-btn").style.display = "block";
+// } else {
+//     document.getElementById("login-btn").style.display = "block";
+//     document.getElementById("register-btn").style.display = "block";
+//     document.getElementById("logout-btn").style.display = "none";
+// }
 
 // All Newspapers
 document.getElementById("allNewspapers-btn").addEventListener("click", (event) => {
-    if (localStorage.getItem("isLoggedIn") === "true") {
-        window.location.href = "allnewspapers.html";
-    } else {
-        alert("Login to read all newspapers!");
-        window.location.href = "login.html";
-    }
+    // if (localStorage.getItem("isLoggedIn") === "true") {
+    //     window.location.href = "allnewspapers.html";
+    // } else {
+    //     alert("Login to read all newspapers!");
+    //     window.location.href = "login.html";
+    // }
+    window.location.href = "allnewspapers.html";
 });
 
 

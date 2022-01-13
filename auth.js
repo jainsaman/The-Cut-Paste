@@ -1,6 +1,4 @@
-const isLoggedIn = () => {
-    return localStorage.getItem("name") !== null;
-}
+
 
 // Register Functionality
 const register = (event) => {
