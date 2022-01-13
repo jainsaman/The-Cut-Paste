@@ -36,6 +36,10 @@ a #register-btn {
 }
 #read-btn a {
   text-decoration: none;
+  color: #1e1e1e;
+  font-size: 0.8rem;
+}
+#read-btn a:hover {
   color: var(--brand-color);
 }
 .btn a {
