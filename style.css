@@ -31,6 +31,9 @@ body {
   max-height: 100%;
   margin: 0 auto;
 }
+#register-btn {
+  padding: 1rem 0 !important;
+}
 .btn a {
   text-decoration: none;
   color: var(--brand-color);
