@@ -21,6 +21,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+#company-logo-auth {
+  width: 320px;
+}
 form p {
   color: var(--brand-red);
 }
