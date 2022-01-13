@@ -84,7 +84,7 @@ document.getElementById('card-container').innerHTML = newspapers.map(newspaper =
         <div class="card-body">
             <h5 class="card-title">${newspaper.date}</h5>
             <button type="button" class="btn-outline-danger">
-            <a href=url target="_blank">Read Now</a>
+            <a href="#" target="_blank">Read Now</a>
           </button>
         </div>
     </div>
