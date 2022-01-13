@@ -31,9 +31,7 @@ body {
   max-height: 100%;
   margin: 0 auto;
 }
-a #register-btn {
-  padding: 0.8rem 0 0.8rem 1rem !important;
-}
+
 #read-btn a {
   text-decoration: none;
   color: #1e1e1e;
