@@ -26,6 +26,6 @@ body {
   text-decoration: none;
   color: var(--brand-color);
 }
-#allNewspapers-btn{
+#allNewspapers-btn {
   cursor: pointer;
 }
