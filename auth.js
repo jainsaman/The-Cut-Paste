@@ -23,6 +23,6 @@ const login = (event) => {
         localStorage.setItem('isLoggedIn', true)
         window.location.href = "index.html"
     } else {
-        alert("Invalid Credentials")
+        alert("Invalid Email or Password")
     }
 }

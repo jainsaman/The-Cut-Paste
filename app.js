@@ -10,7 +10,7 @@ const previewConfig = {
     showPrintPDF: false,
     enableFormFilling: false,
 }
-
+// URL to the PDF file
 let url = "./newspaper.pdf"
 
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
@@ -51,7 +51,42 @@ document.getElementById("allNewspapers-btn").addEventListener("click", (event) =
     if (localStorage.getItem("isLoggedIn") === "true") {
         window.location.href = "allnewspapers.html";
     } else {
-        alert("Please login to view this page!")
+        alert("Login to read all newspapers!");
         window.location.href = "login.html";
     }
 });
+
+// Example Newspaper data
+let newspapers = [
+    {
+        url: "./newspaper.pdf",
+        date: "July 2020",
+    },
+    {
+        url: "./newspaper.pdf",
+        date: "July 2021",
+    },
+    {
+        url: "./newspaper.pdf",
+        date: "July 2022",
+    }
+]
+newspapers.map(newspaper => {
+    console.log(
+        newspaper.date,
+        newspaper.url
+    )
+})
+
+// All Newspapers Functionality
+document.getElementById('card-container').innerHTML = newspapers.map(newspaper =>
+    `<div class="card m-3 w-25 mt-3 d-inline-flex">
+        <div class="card-body">
+            <h5 class="card-title">${newspaper.date}</h5>
+            <button type="button" class="btn-outline-danger">
+            <a href=url target="_blank">Read Now</a>
+          </button>
+        </div>
+    </div>
+    `
+).join('')
