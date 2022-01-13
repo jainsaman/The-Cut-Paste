@@ -56,35 +56,45 @@ document.getElementById("allNewspapers-btn").addEventListener("click", (event) =
     }
 });
 
+
+
 // All Newspapers Functionality
 
 // Reference Newspapers Data
-// let newspapers = [
-//     {
-//         pageUrl: "./newspaper.pdf",
-//         date: "2020",
-//     },
-//     {
-//         pageUrl: "./newspaper.pdf",
-//         date: "2021",
-//     },
-//     {
-//         pageUrl: "./newspaper.pdf",
-//         date: "2022",
-//     },
-// ]
+let newspapers = [
+    {
+        url: "Read Now",
+        date: "July 2020",
+    },
+    {
+        url: "Read Now",
+        date: "July 2020",
+    },
+    {
+        url: "Read Now",
+        date: "July 2020",
+    },
+    {
+        url: "Read Now",
+        date: "July 2020",
+    },
+    {
+        url: "Read Now",
+        date: "July 2020",
+    },
 
 
+]
 // Mapping All Newspapers
 
-// document.getElementById('card-container').innerHTML = newspapers.map(newspaper =>
-//     `<div class="card m-3 w-25 mt-3 d-inline-flex">
-//         <div class="card-body">
-//             <h5 class="card-title">${newspaper.date}</h5>
-//             <button type="button" class="btn-outline-danger">
-//             <a href=newspaper.pageUrl target="_blank">Read Now</a>
-//           </button>
-//         </div>
-//     </div>
-//     `
-// ).join('')
+document.getElementById('card-container').innerHTML = newspapers.map(newspaper =>
+    `<div class="card m-3 w-75 mt-3">
+        <div class="card-body w-100 d-flex justify-content-between">
+            <h5 class="card-title">${newspaper.date}</h5>
+            <button type="button" class="btn-outline-danger">
+            <a href="./newspaper.pdf" target="_blank">Read Now</a>
+          </button>
+        </div>
+    </div>
+    `
+).join('')
