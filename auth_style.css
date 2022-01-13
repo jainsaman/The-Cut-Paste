@@ -79,21 +79,9 @@ form p {
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
-  font-size: 12px;
+  font-size: 14px;
 }
 .form .message a {
   color: var(--brand-red);
   text-decoration: none;
 }
-/* .form .register-form {
-  display: none;
-}
-.form .login-form {
-  display: none;
-}
-.form .register-form.active {
-  display: block;
-}
-.form .login-form.active {
-  display: block;
-} */

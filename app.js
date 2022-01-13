@@ -32,6 +32,7 @@ document.getElementById("subscribe-btn").addEventListener("click", (event) => {
 // LogOut
 document.getElementById("logout-btn").addEventListener("click", (event) => {
     localStorage.clear();
+    alert("You have been logged out!");
     window.location.href = "index.html";
 });
 
@@ -48,7 +49,6 @@ if (localStorage.getItem("isLoggedIn") === "true") {
 // All Newspapers
 document.getElementById("allNewspapers-btn").addEventListener("click", (event) => {
     if (localStorage.getItem("isLoggedIn") === "true") {
-
         window.location.href = "allnewspapers.html";
     } else {
         alert("Please login to view this page!")
