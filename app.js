@@ -32,3 +32,27 @@ function renderPage(pageNumber, canvas) {
         });
     });
 }
+
+// Newsletter Subscription
+document.getElementById("subscribe-btn").addEventListener("click", (event) => {
+    let subscribeEmail = document.getElementById("subscribe-email").value;
+    alert("Thank you for subscribing to our newsletter!");
+    document.getElementById("subscribe-email").value = "";
+});
+
+// LogOut
+document.getElementById("logout-btn").addEventListener("click", (event) => {
+    console.log("Clicked");
+    localStorage.clear();
+});
+
+if (localStorage.getItem("isLoggedIn") === "true") {
+    console.log("Yes")
+    document.getElementById("register-btn").style.display = "none";
+    document.getElementById("login-btn").style.display = "none";
+    document.getElementById("logout-btn").style.display = "block";
+} else {
+    document.getElementById("login-btn").style.display = "block";
+    document.getElementById("register-btn").style.display = "block";
+    document.getElementById("logout-btn").style.display = "none";
+}

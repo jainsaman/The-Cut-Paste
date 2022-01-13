@@ -82,7 +82,7 @@ form p {
   color: var(--brand-red);
   text-decoration: none;
 }
-.form .register-form {
+/* .form .register-form {
   display: none;
 }
 .form .login-form {
@@ -93,4 +93,4 @@ form p {
 }
 .form .login-form.active {
   display: block;
-}
+} */

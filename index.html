@@ -46,11 +46,28 @@
               <a class="nav-link" href="#">All Newspapers</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <button class="btn btn-danger fs-5" type="submit">
-              <a href="./auth.html">Login</a>
+          <!-- <form id="auth-form" class="d-flex">
+            <a class="nav-link fs-5" id="register-btn" href="./register.html"
+              >Register</a
+            >
+            <a class="nav-link fs-5" id="logout-btn" href="./login.html"
+              >Register</a
+            >
+            <button id="logout-btn" class="btn btn-danger fs-5" type="submit">
+              <a href="./login.html">Login</a>
             </button>
-          </form>
+          </form> -->
+          <a
+            class="nav-link link-danger fs-5"
+            id="register-btn"
+            href="./register.html"
+            >Register</a
+          ><button id="login-btn" class="btn btn-danger fs-5" type="button">
+            <a href="./login.html">Log In</a>
+          </button>
+          <button id="logout-btn" class="btn btn-danger fs-5" type="button">
+            <a href="./index.html">Log Out</a>
+          </button>
         </div>
       </div>
     </nav>
@@ -63,10 +80,18 @@
           <input
             autocomplete="on"
             type="email"
+            id="subscribe-email"
             class="form-control me-3"
             placeholder="Enter Email Address"
+            required
           />
-          <button class="btn btn-danger fs-5 ml-auto mr-3">Subscribe</button>
+          <button
+            type="button"
+            class="btn btn-danger fs-5 ml-auto mr-3"
+            id="subscribe-btn"
+          >
+            Subscribe
+          </button>
         </div>
       </div>
     </div>

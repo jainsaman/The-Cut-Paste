@@ -11,45 +11,27 @@
     <div class="login-page" id="login-container">
       <h2>Company Logo</h2>
       <div class="form">
-        <!-- Register / Sign Up Form   -->
-        <form class="register-form">
-          <h3>Register</h3>
-          <input autocomplete="on" type="text" placeholder="Name" required />
-          <input
-            autocomplete="on"
-            type="text"
-            placeholder="Email address"
-            required
-          />
-          <input
-            autocomplete="off"
-            type="password"
-            placeholder="Password"
-            required
-          />
-          <button>Register</button>
-          <p class="message">
-            Already registered? <a href="#" id="signInBtn">Sign In</a>
-          </p>
-        </form>
         <!-- Login Form  -->
         <form class="login-form">
           <h3>Login</h3>
           <input
             autocomplete="on"
-            type="text"
-            placeholder="Username"
+            type="email"
+            placeholder="Email  Address"
             required
+            id="user-email-login"
           />
           <input
             autocomplete="off"
+            id="password-login"
             type="password"
             placeholder="Password"
             required
           />
-          <button>Login</button>
+          <button type="button" onclick="login()">Login</button>
           <p class="message">
-            Not Registered? <a href="#" id="signUpBtn">Create an account</a>
+            Not Registered?
+            <a href="./register.html" id="signUpBtn">Create an account</a>
           </p>
         </form>
       </div>

@@ -1,30 +1,28 @@
-// Selectors 
-const signUpBtn = document.querySelector(".message a#signUpBtn");
-console.log(signUpBtn);
-const signInBtn = document.querySelector(".message a#signInBtn");
-const registerForm = document.querySelector("form.register-form")
-const loginForm = document.querySelector("form.login-form")
-
-
-// Toggle Functions
-const toggleSignUp = () => {
-    registerForm.classList.toggle("active");
-}
-const toggleSignIn = () => {
-    loginForm.classList.toggle("active");
+const isLoggedIn = () => {
+    return localStorage.getItem("name") !== null;
 }
 
-// Class Functionality
-window.addEventListener('load', (event) => {
-    registerForm.classList.add("active");
-});
-signUpBtn.addEventListener("click", () => {
-    registerForm.classList.add("active");
-    loginForm.classList.remove("active");
-});
-signInBtn.addEventListener("click", () => {
-    loginForm.classList.add("active");
-    registerForm.classList.remove("active");
-
-});
-
+// Register Functionality
+const register = (event) => {
+    let name = document.getElementById('user-name').value
+    let email = document.getElementById('user-email').value
+    let password = document.getElementById('password').value
+    localStorage.setItem('Password', password)
+    localStorage.setItem('Email', email)
+    localStorage.setItem('Name', name)
+    localStorage.setItem('isLoggedIn', true)
+    alert("Registered Successfully")
+    window.location.href = "index.html"
+}
+// Login Functionality
+const login = (event) => {
+    let email = document.getElementById('user-email-login').value
+    let password = document.getElementById('password-login').value
+    if (email === localStorage.getItem('Email') && password === localStorage.getItem('Password')) {
+        alert("Login Successful")
+        localStorage.setItem('isLoggedIn', true)
+        window.location.href = "index.html"
+    } else {
+        alert("Invalid Credentials")
+    }
+}
