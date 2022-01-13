@@ -1,4 +1,6 @@
 // PDF Embed API
+const apiKey = "a94c9ac546334b69bf5b8a3229c9637c"
+
 const previewConfig = {
     showDownloadPDF: false,
     showPageControls: false,
@@ -10,7 +12,6 @@ const previewConfig = {
 }
 
 let url = "./newspaper.pdf"
-const apiKey = "a94c9ac546334b69bf5b8a3229c9637c"
 
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
     var adobeDCView = new AdobeDC.View({ clientId: apiKey, divId: "adobe-dc-view" });
