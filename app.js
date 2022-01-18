@@ -60,7 +60,7 @@ document.getElementById('card-container').innerHTML = newspapers.map(newspaper =
             <h5 class="m-0 card-title">${newspaper.date}</h5>
             <button id="read-btn" type="button" class="btn btn-outline-danger">
             <a href=${newspaper.url} target="_blank">Read Now</a>
-          </button>
+            </button>
         </div>
     </div>
     `
