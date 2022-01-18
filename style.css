@@ -125,4 +125,7 @@ body {
   .d-flex .btn.fs-5{
     font-size: 1rem !important;
   }
+  .loaderImg img{
+    width: 90vw;
+  }
 }
